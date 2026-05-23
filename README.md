@@ -58,8 +58,8 @@ Run the program:
 
 Expected output:
 
-    C++ läuft sauber mit CLion/CMake.
-    Summe: 100
+    C++ runs cleanly with CLion/CMake.
+    Sum: 100
 
 ## What This Demonstrates
 
