@@ -1,8 +1,8 @@
 # C++ Basics
 
-A small C++20 setup and learning repository for my local developer environment on an Intel iMac running macOS Sonoma.
+A small C++20 setup and learning repository for my local developer environment.
 
-This repository verifies that a modern C++ workflow works correctly with CLion, CMake, Ninja, Apple clang++, Git, and GitHub.
+This repository verifies that a modern C++ workflow works correctly with CLion, CMake, Ninja, Apple clang++, Git, and GitHub on my Intel iMac setup.
 
 ## Purpose
 
@@ -16,15 +16,19 @@ This is not intended to be a large C++ application. It is a compact baseline pro
 
 C++ is a secondary technical skill in my current learning path. My main focus is data and process analysis, SQL, Python, BI, and Microsoft-oriented data tooling.
 
-## Environment
+## Tested Environment
 
-- macOS Sonoma on Intel iMac
-- CLion
-- Apple clang++
-- CMake
-- Ninja
+- iMac Retina 4K, 21.5-inch, Late 2015
+- Intel x86_64
+- macOS Sonoma 14.8.7 via OpenCore Legacy Patcher
+- CLion via JetBrains Toolbox
+- Apple clang++ 16
+- CMake 4.3.2
+- Ninja 1.13.2
 - C++20
 - Git / GitHub
+
+This repository also documents that the toolchain works on a legacy Intel Mac setup used as a stable learning and development machine.
 
 ## Repository Structure
 
@@ -32,6 +36,8 @@ C++ is a secondary technical skill in my current learning path. My main focus is
     ├── CMakeLists.txt
     ├── main.cpp
     ├── README.md
+    ├── .clang-format
+    ├── .editorconfig
     └── .gitignore
 
 Build directories such as `build/` and `cmake-build-debug/` are intentionally excluded from Git.
@@ -78,3 +84,5 @@ Possible future additions:
 ## Notes
 
 This repository is intentionally small. Its purpose is to document and verify a clean C++ development setup before building larger tools.
+
+No local build artifacts, IDE metadata, or machine-specific files are committed.
