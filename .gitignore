@@ -1,0 +1,17 @@
+# Build directories
+build/
+cmake-build-*/
+
+# CLion / JetBrains project files
+.idea/
+
+# macOS
+.DS_Store
+
+# Compiled binaries / objects
+*.o
+*.obj
+*.exe
+*.out
+*.app
+*.dSYM/
