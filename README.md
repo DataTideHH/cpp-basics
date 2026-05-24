@@ -2,7 +2,7 @@
 
 A small C++20 setup and learning repository for my local developer environment.
 
-This repository verifies that a modern C++ workflow works correctly with CLion, CMake, Ninja, Apple clang++, Git, and GitHub on my Intel iMac setup.
+This repository verifies that a modern C++ workflow works correctly with CLion, CMake, Ninja, Apple clang++, Git, and GitHub on my Intel Mac setup.
 
 ## Purpose
 
@@ -32,34 +32,62 @@ This repository also documents that the toolchain works on a legacy Intel Mac se
 
 ## Repository Structure
 
-    .
-    ├── CMakeLists.txt
-    ├── main.cpp
-    ├── README.md
-    ├── .clang-format
-    ├── .editorconfig
-    └── .gitignore
+```text
+cpp-basics/
+├── CMakeLists.txt
+├── main.cpp
+├── README.md
+├── LICENSE
+├── .clang-format
+├── .editorconfig
+└── .gitignore
+```
 
-Build directories such as `build/` and `cmake-build-debug/` are intentionally excluded from Git.
+Build directories and local IDE metadata are intentionally excluded from Git:
+
+```text
+.idea/
+build/
+cmake-build-debug/
+```
+
+## Run in CLion
+
+Open the project in CLion and run the `cpp_basics` configuration.
+
+Expected output:
+
+```text
+C++ runs cleanly with CLion/CMake.
+Sum: 100
+```
 
 ## Build from Terminal
 
 Configure the project:
 
-    cmake -S . -B build -G Ninja
+```zsh
+cmake -S . -B build -G Ninja
+```
 
 Build the executable:
 
-    cmake --build build
+```zsh
+cmake --build build
+```
 
 Run the program:
 
-    ./build/cpp_basics
+```zsh
+./build/cpp_basics
+```
 
 Expected output:
 
-    C++ runs cleanly with CLion/CMake.
-    Sum: 100
+```text
+C++ runs cleanly with CLion/CMake.
+Sum: 100
+```
 
 ## What This Demonstrates
 
