@@ -18,17 +18,17 @@ void print_usage(std::string_view program_name) {
 
 void print_result(const subnet::Calculation& result) {
     std::cout
-        << "Input IP:          " << result.input_ip << \n\
-        << "CIDR prefix:       /" << result.prefix << \n\
-        << "Subnet mask:       " << result.subnet_mask << \n\
-        << "Wildcard mask:     " << result.wildcard_mask << \n\
-        << "Network address:   " << result.network_address << \n\
-        << "Broadcast address: " << result.broadcast_address << \n\
-        << "Total addresses:   " << result.total_addresses << \n\
-        << "Usable hosts:      " << result.usable_hosts << \n\
-        << "First usable host: " << result.first_usable_host << \n\
-        << "Last usable host:  " << result.last_usable_host << \n\
-        << "Note:              " << result.note << \n\;
+        << "Input IP:          " << result.input_ip << '\n'
+        << "CIDR prefix:       /" << result.prefix << '\n'
+        << "Subnet mask:       " << result.subnet_mask << '\n'
+        << "Wildcard mask:     " << result.wildcard_mask << '\n'
+        << "Network address:   " << result.network_address << '\n'
+        << "Broadcast address: " << result.broadcast_address << '\n'
+        << "Total addresses:   " << result.total_addresses << '\n'
+        << "Usable hosts:      " << result.usable_hosts << '\n'
+        << "First usable host: " << result.first_usable_host << '\n'
+        << "Last usable host:  " << result.last_usable_host << '\n'
+        << "Note:              " << result.note << '\n';
 }
 
 } // namespace
