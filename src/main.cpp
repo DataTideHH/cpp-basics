@@ -1,6 +1,3 @@
-//
-// Created by Tobias Wietelmann on 25.05.26.
-//
 #include "subnet.h"
 
 #include <iostream>

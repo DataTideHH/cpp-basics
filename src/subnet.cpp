@@ -1,6 +1,3 @@
-//
-// Created by Tobias Wietelmann on 25.05.26.
-//
 #include "subnet.h"
 #include <charconv>
 #include <limits>
@@ -169,6 +166,4 @@ std::optional<Calculation> calculate(std::string_view cidr) {
     };
 }
 
-} // namespace subnet//
-// Created by Tobias Wietelmann on 25.05.26.
-//
+} // namespace subnet

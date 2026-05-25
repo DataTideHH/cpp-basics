@@ -40,6 +40,7 @@ This repository also documents that the toolchain works on a legacy Intel Mac se
     │   ├── main.cpp
     │   └── subnet.cpp
     ├── README.md
+    ├── LICENSE
     ├── .clang-format
     ├── .editorconfig
     └── .gitignore
@@ -56,10 +57,23 @@ cmake-build-debug/
 
 Open the project in CLion and run the `cpp_basics` configuration.
 
+Program arguments:
+
+    192.168.10.42/24
+
 Expected output:
 
-```text
-```
+    Input IP:          192.168.10.42
+    CIDR prefix:       /24
+    Subnet mask:       255.255.255.0
+    Wildcard mask:     0.0.0.255
+    Network address:   192.168.10.0
+    Broadcast address: 192.168.10.255
+    Total addresses:   256
+    Usable hosts:      254
+    First usable host: 192.168.10.1
+    Last usable host:  192.168.10.254
+    Note:              Standard subnet with network and broadcast addresses excluded.
 
 ## Build from Terminal
 
@@ -112,7 +126,6 @@ Possible future additions:
 - a simple CSV checker
 - a logfile parser
 - basic unit tests
-- a more structured `src/` and `include/` layout
 
 ## Notes
 
