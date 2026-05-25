@@ -32,16 +32,17 @@ This repository also documents that the toolchain works on a legacy Intel Mac se
 
 ## Repository Structure
 
-```text
-cpp-basics/
-├── CMakeLists.txt
-├── main.cpp
-├── README.md
-├── LICENSE
-├── .clang-format
-├── .editorconfig
-└── .gitignore
-```
+    .
+    ├── CMakeLists.txt
+    ├── include/
+    │   └── subnet.h
+    ├── src/
+    │   ├── main.cpp
+    │   └── subnet.cpp
+    ├── README.md
+    ├── .clang-format
+    ├── .editorconfig
+    └── .gitignore
 
 Build directories and local IDE metadata are intentionally excluded from Git:
 
@@ -58,42 +59,47 @@ Open the project in CLion and run the `cpp_basics` configuration.
 Expected output:
 
 ```text
-C++ runs cleanly with CLion/CMake.
-Sum: 100
 ```
 
 ## Build from Terminal
 
 Configure the project:
 
-```zsh
-cmake -S . -B build -G Ninja
-```
+    cmake -S . -B build -G Ninja
 
 Build the executable:
 
-```zsh
-cmake --build build
-```
+    cmake --build build
 
-Run the program:
+Run the subnet calculator:
 
-```zsh
-./build/cpp_basics
-```
+    ./build/cpp_basics 192.168.10.42/24
 
 Expected output:
 
-```text
-C++ runs cleanly with CLion/CMake.
-Sum: 100
-```
+    Input IP:          192.168.10.42
+    CIDR prefix:       /24
+    Subnet mask:       255.255.255.0
+    Wildcard mask:     0.0.0.255
+    Network address:   192.168.10.0
+    Broadcast address: 192.168.10.255
+    Total addresses:   256
+    Usable hosts:      254
+    First usable host: 192.168.10.1
+    Last usable host:  192.168.10.254
+    Note:              Standard subnet with network and broadcast addresses excluded.
 
 ## What This Demonstrates
 
 This repository demonstrates a working C++20 baseline setup using:
 
 - a CMake-based project structure
+- a small command-line IPv4 subnet calculator
+- IPv4 parsing and validation
+- CIDR prefix handling
+- subnet mask and wildcard mask calculation
+- network and broadcast address calculation
+- basic bitwise operations in C++
 - Ninja as build generator
 - Apple clang++ as compiler
 - CLion as the primary C++ IDE
@@ -103,7 +109,6 @@ This repository demonstrates a working C++20 baseline setup using:
 
 Possible future additions:
 
-- a small subnetting calculator
 - a simple CSV checker
 - a logfile parser
 - basic unit tests
