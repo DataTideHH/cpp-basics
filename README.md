@@ -1,6 +1,6 @@
 # C++ Basics
 
-A small C++20 setup and learning repository for my local developer environment.
+A small C++20 learning project that verifies my local C++ toolchain and includes a command-line IPv4 subnet calculator.
 
 This repository verifies that a modern C++ workflow works correctly with CLion, CMake, Ninja, Apple clang++, Git, and GitHub on my Intel Mac setup.
 
