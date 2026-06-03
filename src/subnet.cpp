@@ -32,6 +32,15 @@ bool parse_number(std::string_view text, int min_value, int max_value, int& resu
     return true;
 }
 
+std::string_view trim(std::string_view text) {
+    const auto first = text.find_first_not_of(" \t\n\r\f\v");
+    if (first == std::string_view::npos) {
+        return {};
+    }
+    const auto last = text.find_last_not_of(" \t\n\r\f\v");
+    return text.substr(first, last - first + 1);
+}
+
 std::vector<std::string_view> split(std::string_view text, char delimiter) {
     std::vector<std::string_view> parts;
     std::size_t start = 0;
@@ -81,6 +90,10 @@ std::optional<std::uint32_t> parse_ipv4(std::string_view ip) {
     std::uint32_t result = 0;
 
     for (const auto part : parts) {
+        if (part.size() > 1 && part.front() == '0') {
+            return std::nullopt;
+        }
+
         int octet = 0;
 
         if (!parse_number(part, 0, 255, octet)) {
@@ -106,6 +119,8 @@ std::string to_ipv4(std::uint32_t value) {
 }
 
 std::optional<Calculation> calculate(std::string_view cidr) {
+    cidr = trim(cidr);
+
     const auto slash_position = cidr.find('/');
 
     if (slash_position == std::string_view::npos) {
