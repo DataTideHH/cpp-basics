@@ -16,3 +16,6 @@ cmake-build-*/
 *.out
 *.app
 *.dSYM/
+
+# Local AI assistant instructions
+CLAUDE.md
