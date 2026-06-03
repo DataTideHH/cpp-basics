@@ -207,12 +207,9 @@ Only intentional source or documentation changes should be committed.
 
 Possible future additions:
 
-- align input validation behavior with the Java subnet calculator
 - add clearer validation messages for invalid subnet input
-- add small C++ basics examples for functions, structs and standard library containers
-- add simple file input/output examples
 - add basic unit tests later on
-- document compiler differences between Apple clang++, LLVM clang++ and MSVC where relevant
+- document compiler differences between Apple clang++, GNU g++ and MSVC where relevant
 
 ## Notes
 
